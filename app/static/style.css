@@ -1,0 +1,244 @@
+body{
+    margin: 0;
+    padding: 0;
+    /*background:#a7a09a;*/
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* Divs subdivision */
+
+#content{
+    background-color: #5e72e4 !important;
+    width: 1280px;
+    height: 600px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0 auto;
+}
+
+#bottom_content{
+    clear: both;
+    height: 175px;  
+    margin-top: 5px;
+}
+
+#top_content{
+    clear: both;
+    height: 410px;
+}
+
+
+#bottom_left{
+    float: left;
+    width: 593px;
+    margin-left: 5px;
+    height: 170px;
+    background-color: #fff;
+    border: solid 1px;
+}
+
+#bottom_right{
+    float: right;
+    width: 665px;
+    height: 170px;
+    left: 5px;
+    margin-right: 5px;
+    background-color: #fff;
+    border: solid 1px;
+}
+
+
+#top_left{
+    float: left;
+    height: 410px;
+    width: 888px;
+    margin-left: 5px;
+    border: solid 1px;
+    background-color: #fff;
+}
+
+#top_right{
+    float: right;
+    height: 410px;
+    width: 368px;
+    border: solid 1px;
+    margin: 0 5;
+    background-color: #fff;
+}
+
+
+/* Sidebar */
+.sidebar{
+    height:100%;
+    width:300px;
+    background-color:#fff;
+    position:fixed!important;
+    z-index:1;overflow:auto
+}
+
+/* Appearence */
+.block-title{
+    display: block;
+    float: left;
+    position: relative;
+    margin-left: 5px;
+    margin-top: 3px;
+    font-weight: 600;
+    color: #606060;
+}
+
+#sidebar_open{
+    float:left;
+    border:none;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    font-size: 15px;
+    font-weight: 600px;
+}
+
+#sidebar_close{
+    float:right;
+    border:none;
+    text-decoration:none;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    font-size: 15px;
+    font-weight: 600px;
+}
+
+#sidebar_open:hover, #sidebar_close:hover{
+    background-color: #5e72e4;
+}
+
+#sidebar{
+    background-color: #fefefe;
+    border-right: solid 2px #5e72e4;
+}
+
+#selectors_table{
+    width: 80%;
+    margin: 10 auto;
+    border-collapse:separate;
+    border-spacing:0 5px;
+}
+
+tr:nth-of-type(odd) {
+    background-color:#ccc;
+}
+
+
+/* Network plot */
+#intersection_plot{
+    height: 150px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    position: relative;
+    top: 20px;
+}
+
+/* width */
+#intersection_plot::-webkit-scrollbar {
+    height: 6px;
+}
+  
+/* Track */
+#intersection_plot::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+#intersection_plot::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+#intersection_plot::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+
+/* Parallel coordinates plot */
+#parallel_plot{
+    width: 765px;
+    height: 180px;
+    position: relative;
+}
+
+.background path {
+	fill: none;
+	stroke: #ddd;
+	shape-rendering: crispEdges;
+}
+
+.foreground path {
+	fill: none;
+	stroke: steelblue;
+}
+
+
+/* Video player */
+#data_plot{
+    position: relative;
+    top: 20px;
+    background-color: #fff;
+    padding-top: 5px;
+}
+
+#video_player{
+    width: 346px;
+    margin: 0 auto;
+}
+#video_timer{
+    width: 32px;
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+}
+
+#video_image{
+    border: solid 3px #8898aa;
+}
+
+/* Map view */
+
+#map_plot{
+    width: 340px;
+    height: 340px;
+    left: 10px;
+}
+
+#map_tooltip{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    position: absolute;
+    padding: 4px;
+    margin: 8px;
+    background-color: #303030;
+    border: solid;
+    border-width: 1px;
+    color: #efefef;
+    max-width: 300px;
+    z-index: 9;
+    pointer-events: none;
+}
+
+
+/* Main plot */
+
+#morevis_buttons{
+    float: right;
+    margin-right: 30px;
+    margin-top: 5px;
+}
+
+
+/* Color legend */
+#color_legend{
+    position: relative;
+    top: 20px;
+    left: 20px;
+}

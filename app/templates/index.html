@@ -1,0 +1,153 @@
+<html>
+    <head>
+        <title>MoReVis</title>
+        <link rel="stylesheet" type="text/css" href="static/style.css"/>
+        <link rel='stylesheet' href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css'/>
+    </head>
+    <body>
+        <div style="display:none" id="sidebar" class="sidebar">
+            <button id="sidebar_close">Close &times;</button>
+            <table id = "selectors_table">
+                <tbody>
+                    <tr>
+                        <td>Dataset</td>
+                        <td>
+                            <select name="dataset" id="dataset" class = "selector" >
+                                <option value="wildtrack_small" selected="selected">WILDTRACK (small)</option>
+                                <option value="wildtrack_small_2" selected="selected">WILDTRACK 2 (small)</option>
+                                <option value="hurdat" selected="selected">HURDAT (small)</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Spurious Crossing Mark</td>
+                        <td>
+                            <select name="spurious_crossing_mark" id="spurious_crossing_mark" class ="selector">
+                                <option value="dashed">Dashed</option>
+                                <option value="gradient">Gradient</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label name="curve_color">Curve color</label></td>
+                        <td>
+                            <select name="curve_color" id = "curve_color" class = "selector">
+                                <option value = "object">Object</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td>Intersection View</td>
+                        <td>
+                            <select name="intersection_view" id = "intersection_view" class = "selector">
+                                <option value="node_link">Node-link</option>
+                                <option value="vertical_layout" selected="selected">Vertical layout</option>
+                            </select>
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td>
+                            <label for="colormap">2D Colormap</label>
+                        </td>
+                        <td>
+                            <select name="colormap" id="colormap">
+                                <option value="bremm">Bremm</option>
+                                <option value="schumann_urban">Schumann</option>
+                                <option value="steiger">Steiger</option>
+                                <option value="teuling">Teuling</option>
+                                <option value="ziegler" selected = "selected">Ziegler</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="color_scale">Objects colorscale</label>
+                        </td>
+                        <td>
+                            <select name="color_scale" id="color_scale">
+                                <option value="set3">Set3</option>
+                                <option value="paired">Paired</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <td >
+                            <label for = "space_break">Space break</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="space_break">
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td >
+                            <label for = "time_distortion">Time distortion</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id="time_distortion">
+                        </td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button type = "button" id = "update">Update</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+        </div>
+        <div id ="content">
+            <div id = "top_content">
+                <div id = "top_left">
+                    <div style="width: 888px;">
+                        <button id="sidebar_open">☰</button>
+                        <p class="block-title">MoReVis</p>
+                        <div id = "morevis_buttons"></div>
+                    </div>
+                    <div id = "morevis_plot">
+                        <svg id = "morevis_svg">
+                        </svg>
+                    </div>
+                </div>
+                <div id = "top_right">
+                    <p class="block-title">DATA VIEW</p>
+                    <div id = "data_plot">
+                    </div>
+                    <div id = "color_legend"></div>
+                </div>
+            </div>
+            <div id = "bottom_content">
+                <div id = "bottom_left">
+                    <div style="position: absolute;">
+                    <p class="block-title">INTERSECTION VIEW</p>
+                </div>
+                    <div id = "intersection_plot">
+                        <svg id = "intersection_svg">
+                        </svg>
+                    </div>
+                </div>
+                <div id = "bottom_right">
+                    <p class="block-title">PARALLEL COORDINATES</p>
+                    <div id = "parallel_plot">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://unpkg.com/deck.gl@latest/dist.min.js"></script>
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+        <script src="https://d3js.org/d3.v6.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src='static/parallelCoordinates.js' ></script>
+        <script type="text/javascript" src="static/scales.js"></script>
+        <script type="text/javascript" src="static/map.js"></script>
+        <script type="text/javascript" src="static/network.js"></script>
+        <script type="text/javascript" src="static/color-legend.js"></script>
+        <script type="text/javascript" src="static/video_player.js"></script>
+        <script type="text/javascript" src="static/script.js"></script>
+        
+    </body> 
+</html>

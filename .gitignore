@@ -1,0 +1,16 @@
+#Data
+*.json
+#data/hurdat
+data/wildtrack
+
+#Python
+__pycache__/
+
+#Jupyter
+.ipynb_checkpoints
+
+#VSCode
+.vscode/
+
+*/plots
+*/metrics-results
