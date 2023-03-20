@@ -1,4 +1,4 @@
-name: morevis3
+name: morevis
 channels:
   - mosek
   - gurobi
