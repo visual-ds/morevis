@@ -26,4 +26,4 @@ dependencies:
   - pip:
     - hilbertcurve==2.0.5
     - pymorton==1.0.5
-prefix: /home/giovani/anaconda3/envs/morevis
+prefix: /morevis

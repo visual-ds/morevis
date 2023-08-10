@@ -232,7 +232,7 @@ class Visualization {
         var ajax_request = $.ajax({
             type: 'POST',
             contentType: "application/json;charset=utf-8",
-            url: "/set_dataset",
+            url: "set_dataset",
             traditional: "true",
             data: JSON.stringify({dataset}),
             dataType: "json"
@@ -248,7 +248,7 @@ class Visualization {
                 self.dataset_config_cur.parallel_attr 
             );
 
-            fetch("http://127.0.0.1:5000/get_original_data")
+            fetch("get_original_data")
             .then(response => {
                 if(response.status == 200){
                     return response.json()
