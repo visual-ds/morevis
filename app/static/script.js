@@ -313,7 +313,7 @@ class Visualization {
         var ajax_request = $.ajax({
             type: 'POST',
             contentType: "application/json;charset=utf-8",
-            url: "/set_filtered_data",
+            url: "set_filtered_data",
             traditional: "true",
             data: JSON.stringify({selected_objects}),
             dataType: "json"
@@ -331,7 +331,7 @@ class Visualization {
      */
     preprocess(){
         const self = this;
-        var myUrl = ('http://127.0.0.1:5000/get_scatter_data');
+        var myUrl = ('get_scatter_data');
         fetch(myUrl)
         .then(response => {
             if(response.status == 200){
